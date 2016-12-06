@@ -25,18 +25,18 @@ class Blob:
 		self.x += self.move_x
 		self.y += self.move_y
 
-		if self.x < 0: self.x =0
+		if self.x < 0: self.x = 0
 		elif self.x > WIDTH: self.x = WIDTH
 
-		if self.y < 0: self.x =0
-		elif self.y > HEIGHT: self.x = HEIGHT
+		if self.y < 0: self.y = 0
+		elif self.y > HEIGHT: self.y = HEIGHT
 
 
 def draw_enviroment(blob):
 	game_display.fill(WHITE)
 	pygame.draw.circle(game_display, blob.color, [blob.x, blob.y], blob.size)
 	pygame.display.update()
-	blob.move
+	blob.move()
 
 def main():
 	blue_blob = Blob(BLUE)
